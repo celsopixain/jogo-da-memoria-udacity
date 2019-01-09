@@ -121,7 +121,7 @@
      }
     
     .score-panel .restart{
-        font-size: 7px!importants;
+        font-size: 7px!important;
      }
 
 }
@@ -368,6 +368,7 @@ header h2{
 
 .w3-white{
     text-align: center!important;
+    margin-bottom: 10px;
 }
 
 .sessao-vencedor{

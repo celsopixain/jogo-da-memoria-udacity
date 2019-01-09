@@ -1,7 +1,8 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -24,19 +25,17 @@
             <section class="score-panel">
                 
                 <ul class="stars">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star shine"></i></li>
+                    <li><i class="fa fa-star shine"></i></li>
+                    <li><i class="fa fa-star shine"></i></li>
                 </ul>
                 <br>
-                <span class="moves" value="erros"> </span> 
+                <span class="moves" value="erros"> </span>
                 <span id="timer">00:00</span> 
-                
                 <div class="restart">
-                    <button class="w3-button w3-teal w3-round-large">
+                    <button class="w3-button w3-blue w3-round" onclick="document.getElementById('id03').style.display='none';stopTime()"> 
                         <i class="fa fa-repeat" id="seta-restart" onclick="stopTime()" title="Reiniciar"> Novo</i>
                     </button>
-
                 </div>
             </section>
 
@@ -96,7 +95,7 @@
                 <div class="w3-modal-content w3-animate-zoom">
                     <header class="w3-container w3-teal"> 
                         <span onclick="document.getElementById('id02').style.display='none';stopTime()" class="w3-button w3-display-topright">&times;</span>
-                        <h3>Parabéns você venceu!!!</h3>
+                        <h3>Parabéns! Você ganhou!</h3>
                     </header>
 
                     <div class="w3-container">
@@ -123,7 +122,7 @@
                         </section>         
                     </div>
 
-                    <button class="w3-btn w3-blue w3-border w3-round-large" onclick="document.getElementById('id02').style.display='none';stopTime();">Tente Novamente</button>
+                    <button class="w3-btn w3-blue w3-border w3-round-large" onclick="document.getElementById('id02').style.display='none';stopTime();">Jogar novamente</button>
                 </div>
             </div>
         </div>
@@ -137,15 +136,16 @@
                 </header>
                 <div class="w3-container">
                     <section >
-                        <p  class="w3-teal w3-round-large sessao-modal">Dentro de <strong>10 segundos </strong>os desenhos ficarão ocultos.</p>
+                        
                         <p class="w3-blue-grey w3-round-large sessao-modal">Encontre-os o mais rápido que puder!</p>
+                        <p  class="w3-round-large sessao-modal">Dentro de <strong>10 segundos </strong>os desenhos ficarão ocultos.</p>
                         <p class="w3-teal w3-round-large sessao-modal">Boa Sorte!!</p>
                     </section>
                 </div>
 
                 <footer class="w3-white">
                     <div>
-                        <button class="w3-btn w3-blue w3-round" onclick="document.getElementById('id03').style.display='none';stopTime()"> 
+                        <button class="w3-button w3-blue w3-round" onclick="document.getElementById('id03').style.display='none';stopTime()"> 
                             Começar
                         </button>
                     </div>
