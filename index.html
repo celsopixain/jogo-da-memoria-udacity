@@ -1,174 +1,159 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Fredericka+the+Great|Merienda|Black+Ops+One|Indie+Flower|Permanent+Marker|Archivo" rel="stylesheet">
-    <title>Jogo da Memória</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Fredericka+the+Great|Merienda|Black+Ops+One|Indie+Flower|Permanent+Marker|Archivo" rel="stylesheet">
+        <title>Jogo da Memória</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
 
-    <div class="container">
-        <header>
-            <h2 id="title-jogo">Jogo da Memória</h2>
-        </header>
+        <div class="container">
+            <header>
+                <h2 id="title-jogo">Jogo da Memória</h2>
+                <p>Concentre-se e use a sua memória para encontrar todos os pares.</p>
+            </header>
 
-        <section class="score-panel">
-            
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-            <br>
-            <span class="moves" value="erros"> </span> 
-            <span id="timer">00:00</span> 
-            
-            <div class="restart">
-                <button class="w3-button w3-teal w3-round-large">
-                    <i class="fa fa-repeat" id="seta-restart" onclick="stopTime()" title="Reiniciar"> Novo</i>
-                </button>
+            <section class="score-panel">
+                
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+                <br>
+                <span class="moves" value="erros"> </span> 
+                <span id="timer">00:00</span> 
+                
+                <div class="restart">
+                    <button class="w3-button w3-teal w3-round-large">
+                        <i class="fa fa-repeat" id="seta-restart" onclick="stopTime()" title="Reiniciar"> Novo</i>
+                    </button>
 
-            </div>
-            
-        </section>
-
-        <ul class="deck">
-            <li class="card" >
-                <i class="fa fa-diamond" ></i>
-            
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-heart"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-heart"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-        </ul>
-            
-        <div id="id02" class="w3-modal">
-            <div class="w3-modal-content w3-animate-zoom">
-                <header class="w3-container w3-teal"> 
-                    <span onclick="document.getElementById('id02').style.display='none';stopTime()" class="w3-button w3-display-topright">&times;</span>
-                    <h3>Parabéns você venceu!!!</h3>
-                </header>
-
-                <div class="w3-container">
-                    <section class="sessao-vencedor">
-                        <div class="div-tempo">
-                            <br>
-                            <table class="w3-table-all w3-centered w3-large">
-                                <tr class="w3-light-red">
-                                    <th>Tempo Percorrido</th>
-                                    <th>Estrelas</th>
-                                </tr>
-                                <tr>
-                                    <td id="tempo-decorrente">02:00</td>
-                                    <td id="winning-stars">
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                     <div>
                 </div>
+            </section>
 
-                    <button class="w3-btn w3-blue w3-border w3-round-large" onclick="document.getElementById('id02').style.display='none';stopTime();">Tente Novamente</button>
-
-                </section>
-            </div>
-            
-        </div>
-    </div>
-        <!-- Fim Modal Vencedor -->  
-
-        <!-- Modal Vencedor -->
-    
-                <div id="id03" class="w3-modal">
-                  <div class="w3-modal-content w3-animate-zoom">
-
+            <ul class="deck">
+                <li class="card" >
+                    <i class="fa fa-diamond" ></i>
+                
+                </li>
+                <li class="card">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-heart"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-cube"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-heart"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card">
+                    <i class="fa fa-cube"></i>
+                </li>
+            </ul>
+                
+            <div id="id02" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom">
                     <header class="w3-container w3-teal"> 
-                      
-                      <h3>Jogo da Memória</h3>
+                        <span onclick="document.getElementById('id02').style.display='none';stopTime()" class="w3-button w3-display-topright">&times;</span>
+                        <h3>Parabéns você venceu!!!</h3>
                     </header>
+
                     <div class="w3-container">
-                        <section >
-                            <p  class="w3-teal w3-round-large sessao-modal">Dentro de <strong>10 segundos </strong>os desenhos ficarão ocultos.</p>
-                            <p class="w3-blue-grey w3-round-large sessao-modal">Encontre-os o mais rápido que puder!</p>
-                            <p class="w3-teal w3-round-large sessao-modal">Boa Sorte!!</p>
-                        </section>
-                            
+                        <section class="sessao-vencedor">
+                            <div class="div-tempo">
+                                <br>
+                                <table class="w3-table-all w3-centered w3-large">
+                                    <tr class="w3-light-red">
+                                        <th>Tempo Percorrido</th>
+                                        <th>Estrelas</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="tempo-decorrente">02:00</td>
+                                        <td id="winning-stars">
+                                            <ul class="stars">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>         
                     </div>
 
-                    <footer class="w3-white">
-                        <div>
-                            <button class="w3-btn w3-blue w3-round" onclick="document.getElementById('id03').style.display='none';stopTime()">
-                                Começar
-                            </button>
-                            
-                            
-                        </div>
-                        
-                    </footer>
-                        
-
-             
-                  </div>
+                    <button class="w3-btn w3-blue w3-border w3-round-large" onclick="document.getElementById('id02').style.display='none';stopTime();">Tente Novamente</button>
                 </div>
-            <!-- Fim Modal Vencedor -->   
+            </div>
+        </div>
+        <!-- Modal Vencedor -->
 
-    </div>
+        <div id="id03" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom">
 
-    <script src="js/app.js"></script>
-</body>
+                <header class="w3-container w3-teal"> 
+                    <h3>Jogo da Memória</h3>
+                </header>
+                <div class="w3-container">
+                    <section >
+                        <p  class="w3-teal w3-round-large sessao-modal">Dentro de <strong>10 segundos </strong>os desenhos ficarão ocultos.</p>
+                        <p class="w3-blue-grey w3-round-large sessao-modal">Encontre-os o mais rápido que puder!</p>
+                        <p class="w3-teal w3-round-large sessao-modal">Boa Sorte!!</p>
+                    </section>
+                </div>
+
+                <footer class="w3-white">
+                    <div>
+                        <button class="w3-btn w3-blue w3-round" onclick="document.getElementById('id03').style.display='none';stopTime()"> 
+                            Começar
+                        </button>
+                    </div>
+                </footer>
+                
+            </div>
+        </div> <!-- Fim Modal Vencedor -->   
+        
+        <script src="js/app.js"></script>
+    </body>
 </html>

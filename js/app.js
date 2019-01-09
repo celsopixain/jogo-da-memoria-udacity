@@ -1,21 +1,21 @@
-var varTime;
-var erros = 0;
-var time;
-var selected;
-var selected_before;
-var pares = false;
-var lista_selecionados = [];
-var lista_card;
-var lista_encontrados = [];
-var nomeCLassFirst;
-var nomeCLassSecund;
-var wins = 0;
-var cores = ["#ee82ee","#a9a9a9","#40e0d0","#ffff00" ,"#f0e68c","#dc143c","#7fff00","#f4a460"];
-var indice_cor = 0;
-var lista_cartas_reais = [];
-var vitorias = 0;
-var minutosInicial;
-var segundosInicial;
+let varTime;
+let erros = 0;
+let time;
+let selected;
+let selected_before;
+let pares = false;
+let lista_selecionados = [];
+let lista_card;
+let lista_encontrados = [];
+let nomeCLassFirst;
+let nomeCLassSecund;
+let wins = 0;
+let cores = ["#ee82ee","#a9a9a9","#40e0d0","#ffff00" ,"#f0e68c","#dc143c","#7fff00","#f4a460"];
+let indice_cor = 0;
+let lista_cartas_reais = [];
+let vitorias = 0;
+let minutosInicial;
+let segundosInicial;
 
 initialPage();
 controleCartas();
@@ -460,29 +460,6 @@ inicial
 	})
 	 	
  }
-
-/**
-* @description Função efetua a ação de embaralhar novamente as cartas após clicar em qualquer local 
-da DOM, quando
-	é exibido o modal    
-*/
-/*
-function clickOutToModal(){
-
-	window.onclick = function(event) {
-	var modal_02 = document.getElementById('id02');
-	var modal_03 = document.getElementById('id03');
-	  if(event.target == modal_02){
-	  	modal_02.style.display = "none";
-	  	embaralhar();
-	  }
-	  if(event.target == modal_03){
-	  	modal_03.style.display = "none";
-	  	embaralhar();
-	  }
-	}
-}
-*/
 
 /**
 * @description Função que inicializa o temporizador solicitando o método a cada segundo    
