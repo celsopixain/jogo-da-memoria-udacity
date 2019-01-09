@@ -259,3 +259,7 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+#timer{
+    font-size: 20px;
+}
