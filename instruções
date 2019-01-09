@@ -1,0 +1,60 @@
+/ *
+    Obtenha o código inicial
+    Você também pode começar do zero se quiser (sem nenhum arquivo). Na verdade, nós até encorajamos você a fazer isso! Você consegue aprender bem mais se tentar desenvolver por conta própria! Contudo, pode ser um bocado difícil começar totalmente do zero, por isso nós fornecemos um projeto já iniciado para auxiliar você.
+
+    Você pode baixar o código inicial do projeto já iniciado em qualquer um dos links abaixo:
+    https://github.com/udacity/fend-project-memory-game
+    repositório do Jogo de Memória no GitHub
+    Esse código inicial tem uma versão estática e não interativa do projeto, para que você possa dar um salto no desenvolvimento.
+
+
+Desenvolvimento de estrátegia
+  É muito importante que planeje seu projeto antes de começar a escrever qualquer código. Quebre o seu projeto em pequenos pedaços de trabalho e planeje sua abordagem em cada um. É muito mais fácil fazer o debug e consertar um problema se você fez apenas uma pequena mudança. As coisas ficam mais difíceis se você demorar muito pra testar seu código. Casas não são construídas tudo de uma vez, mas de tijolo por tijolo.
+
+Fique à vontade de implementar sua própria ideia de fluxo de trabalho, mas se você dar uma travada -- aqui estão algumas dicas rápidas pra começar!
+
+Comece construindo um grid dos cartões. Depois de tudo, o resto das funcionalidades do seu jogo depende do grid.
+
+Quantos pares de cartões você terá?
+Que estrutura de dados você pode usar pra armazenar os símbolos dos cartões? Como você vai iterar (i.e., loop) sob essa estrutura de dados?
+Pense sobre como você pode criar, digamos, uma lista não ordenada em HTML por meio dessa estrutura. Lembre-se de algumas ferramentas e métodos que você aprendeu:
+createElement()
+querySelector()
+getElementbyId()
+appendChild()
+Document
+Seus cartões são colocados aleatoriamente no grid?
+Desenvolve o HTML necessário para representar um cartão. Lembre-se, você precisa representar os dois lados do cartão, e os símbolos ficam de virados "pro chão"
+Como você pode usar propriedades de CSS como transform ou opacity para representar os lados de um cartão?
+Adicione a funcionalidade de lidar com os cliques. Os cliques devem revelar a parte "oculta" de cada cartão. Clicar em um primeiro cartão deve fazê-lo virar, mostrar o símbolo, e permanecer virado. Clicar em um cartão diferente também deve fazê-lo virar e mostrar o símbolo.
+
+Quais evento(s) você deve escutar?
+Como cada evento afeta o CSS?
+Como você pode prevenir que o usuário selecione o mesmo cartão duas vezes?
+Trabalhe na lógica de acerto. Como o seu jogo "sabe" se um jogador combinou ou não dois cartões de mesmo símbolo?
+
+Pense sobre como você pode armazenar temporariamente em algum lugar o primeiro cartão virado. Depois, este cartão precisa ser comparado com o próximo a ser virado.
+Se dois cartões combinam, eles devem permanecer virados
+Se dois cartões não combinam, eles devem voltar a esconder seus símbolos
+Trabalhe na condição de jogo ganho. Como seu jogo "sabe" se um jogador ganhou?
+
+Seu usuário deve ver um modal quando o jogo termina
+Implemente funcionalidades adicionais:
+
+Botão de reiniciar
+Avaliação por estrelas
+Temporizador (como o setTimeout() pode entrar nisso?)
+Contador de movimentos do jogo
+Recomendamos implementar a maioria dos estilos e design do jogo só no final de tudo. Permita que a lógica e funcionalidade do seu jogo determinem a estilização, design, etc.
+
+
+  * Configure o ouvinte de eventos para um cartão. Se um cartão for clicado:
+  * - exibe o símbolo do cartão (coloque essa funcionalidade em outro
+  função que você chama a partir deste)
+  * - adicione o cartão a uma * lista * de cartões "abertos" (coloque esta funcionalidade em outra função que você chama desta)
+  * - se a lista já tiver outro cartão, verifique se os dois cartões correspondem
+  * + se as cartas coincidirem, bloqueie as cartas na posição aberta (coloque esta funcionalidade em outra função que você chama desta)
+  * + se os cartões não coincidirem, remova os cartões da lista e oculte o símbolo do cartão (coloque esta funcionalidade em outra função que você chama deste)
+  * + incrementa o contador de movimentos e exibe-o na página (coloca esta funcionalidade em outra função que você chama desta)
+  * + se todos os cartões tiverem correspondido, exibir uma mensagem com a pontuação final (colocar essa funcionalidade em outra função que você chama a partir desta)
+  * /
