@@ -4,6 +4,7 @@
 
 * [Instruções](#instrucoes)
 * [Contribuindo](#contribuindo)
+* [Como funciona](#comofunciona)
 
 ## Instruções 
 
@@ -20,7 +21,7 @@ As funcionalidades interativas, que dão vida a página; como movimentos e anima
 
 Este código contribui com possiveis métodos para os interessados em interação de jogos da memoria. Envie suas revisões e participe do projeto. 
 
-# Como funciona o jogo-da-memoria
+## Como funciona
 
 Caso você não esteja familiarizado com o jogo, as regras são muito simples: haverá uma série de cartas viradas para baixo, e o jogador deve virar duas dessas cartas para cima para localizar aquelas que combinam entre si!
 
