@@ -9,6 +9,10 @@
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+//Criação de variáveis
+let erros = 0;
+let time;
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
