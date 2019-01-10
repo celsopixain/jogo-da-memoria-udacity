@@ -74,10 +74,11 @@
     #title-jogo{
         font-size: 31px!important;
     }
+    /*
     .moves{
         font-size: 35px!important;
     }
-
+    */
     .deck .card.show {
     font-size: 42px!important;
     }
@@ -109,9 +110,11 @@
         font-size: 31px!important ;
     }
     
+    /*
     .moves{
         font-size: 28px!important ;
     }
+    */
 
     .deck .card.show {
     font-size: 40px!important;
@@ -143,10 +146,11 @@
         font-size: 25px!important ;
     }
     
+    /*
     .moves{
         font-size: 28px!important ;
     }
-
+    */
     .deck .card.show {
     font-size: 40px!important;
 }
@@ -303,13 +307,20 @@ span{
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
+.stars,
+.moves,
+.timer {
+	margin: 0 15px;
+}
+
+
 #seta-restart{
     font-size: 25px;
 }
 
 .moves{
-    font-size: 40px;
-    font-family: 'Nanum Brush Script', cursive;
+    font-size: 16px;
+    font-family: Coda, 'Nanum Brush Script', cursive;
 }
 
 .titulo-movimentos{

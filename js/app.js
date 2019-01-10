@@ -31,7 +31,7 @@ function initialPage(){
 		},0);
 	}
 }
-	
+
 /**
 * @description A função contreoleCartas faz o controle das cartas do jogo.  
 	Nesse bloco até a próxima função são declaradas várias variaveis, alem das chamadas 
@@ -88,6 +88,7 @@ function controleCartas(){
 						blockCard(selected_before,false);
 						notAreTheSame();
 						erros ++;
+						document.querySelector('.moves').textContent = erros + ' Movimentos';
 						
 					}
 				}
@@ -204,6 +205,7 @@ function areTheSame(cor){
 		pares = true;
 		lista_selecionados.splice(0,2);
 		if(lista_encontrados.length == 8){
+			document.getElementById('moves').textContent = erros;
 			document.getElementById('id02').style.display='block';
 			clearInterval(varTime);
 		}
@@ -384,6 +386,8 @@ function getTempoJogo(){
 	}
 }
 
+
+
 /**
 * @description Função realiza a conversão dos segundos em minutos horas e segungos formatados hh:mm:ss   
 * @param {number} seg - Valor passado por parametro para conversão de horas, min e segundos
@@ -476,8 +480,12 @@ function startActionTimer(){
 */
 function stopTime(){
 	clearInterval(varTime);
+	erros = 0;
 	document.getElementById('timer').textContent = '00:00';
+	document.querySelector('.moves').textContent = 'Movimentos';
+	document.querySelector('.moves').textContent = 'Movimentos';
 	time = null;
 	embaralhar();
+	novoJogo();
 }
 
