@@ -88,7 +88,12 @@ function controleCartas(){
 						blockCard(selected_before,false);
 						notAreTheSame();
 						erros ++;
-						document.querySelector('.moves').textContent = erros + ' Movimentos';
+						if (erros === 1){
+							document.querySelector('.moves').textContent = erros + ' Movimento';	
+						}else{
+							document.querySelector('.moves').textContent = erros + ' Movimentos';		
+						}
+						
 						
 					}
 				}
@@ -483,9 +488,7 @@ function stopTime(){
 	erros = 0;
 	document.getElementById('timer').textContent = '00:00';
 	document.querySelector('.moves').textContent = 'Movimentos';
-	document.querySelector('.moves').textContent = 'Movimentos';
 	time = null;
 	embaralhar();
-	novoJogo();
 }
 
